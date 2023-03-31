@@ -1,0 +1,26 @@
+.time{
+ color: rgb(71, 144, 255);
+ font-weight: 1000;
+ font-size: 20px;
+ font-family: Russo One;
+ position: relative;
+ left: 20%;
+ top: 4%;
+}
+
+.wrapper{
+    max-width: 100%;
+    min-height: 1000px;
+}
+
+.button{
+    width: 270px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 10px;
+    position: absolute; 
+    top: 65%;
+    left: 20%;
+ /* border: 0;
+    padding: 0; */
+}

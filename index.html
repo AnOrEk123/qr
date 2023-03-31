@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+function clock() {
+var d = new Date();
+var month_num = d.getMonth()
+var day = d.getDate();
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var seconds = d.getSeconds();
+var dayNum = d.getDay();
+ 
+month=new Array("янв", "февр", "мар", "апр", "мая", "июн",
+"июл", "авг", "сент", "окт", "нояб", "дек");
+ 
+if (day <= 9) day = "0" + day;
+if (hours <= 9) hours = "0" + hours;
+if (minutes <= 9) minutes = "0" + minutes;
+if (seconds <= 9) seconds = "0" + seconds;
+if (dayNum <= 9) dayNum = "0" + dayNum;
+if (dayNum = 04) dayNum = "чт"
+else if (dayNum = 03) dayNum = "ср"
+else if (dayNum = 02) dayNum = "вт"
+else if (dayNum = 01) dayNum = "пн"
+else if (dayNum = 07) dayNum = "вс"
+else if (dayNum = 06) dayNum = "сб"
+else if (dayNum = 05) dayNum = "пт"
+ 
+date_time = dayNum + "," + " " + month[month_num] + "." + " " + day + "," + " " + d.getFullYear() +
+" " + "/" + " " + hours + ":" + minutes + ":" + seconds;
+if (document.layers) {
+ document.layers.doc_time.document.write(date_time);
+ document.layers.doc_time.document.close();
+}
+else document.getElementById("doc_time").innerHTML = date_time;
+ setTimeout("clock()", 1000);
+}
+alert(dayNum);
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+    <div>
+        <div>
+        <img src="img/osnova.png" alt="">
+        <button class="button">asdadssdd</button>
+    </div>
+    </div>
+    <div id="leftmenu" class="leftmenu" style="height: 800px; width: 400px; position: absolute; display: none;">
+    <img src="img/qrс.png" alt="" class="qr-up" style="max-width: 400px; height: 500px;">
+    <span id="doc_time" class="time"></span>
+    </div>
+</div>
+</body>
+<script>clock()</script>
+<script src="index.js"></script>
+</html>
