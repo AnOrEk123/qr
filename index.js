@@ -1,5 +1,7 @@
 const menu = document.getElementsByClassName('button');
 
-menu.addEventListener('click', (event) => {
-  document.getElementById("leftmenu").style.display = "block";
-})
+menu.addEventListener('click', opac());
+
+function opac () {
+  document.getElementById("wra").style.opacity = "0";
+}
