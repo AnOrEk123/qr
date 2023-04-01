@@ -1,7 +1,7 @@
-const menu = document.getElementsByClassName('button');
+const menu = document.querySelector(".button");
 
-menu.addEventListener('click', opac());
 
-function opac () {
-  document.getElementById("wra").style.opacity = "0";
-}
+
+menu.addEventListener('click', (event) => {
+  document.querySelector(".qrcod").style.display = "block";
+})
