@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><--</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript">
 function clock() {
@@ -41,21 +41,20 @@ if (document.layers) {
 else document.getElementById("doc_time").innerHTML = date_time;
  setTimeout("clock()", 1000);
 }
-alert(dayNum);
     </script>
 </head>
 <body>
     <div class="wrapper">
-    <div>
-        <div>
+    <div class="wra" style="z-index: 2; opacity: 1;"> 
         <img src="img/osnova.png" alt="">
-        <button class="button">asdadssdd</button>
+        <button class="button"></button>
     </div>
-    </div>
-    <div id="leftmenu" class="leftmenu" style="height: 800px; width: 400px; position: absolute; opacity: 0;">
-    <img src="img/qrс.png" alt="" class="qr-up" style="max-width: 400px; height: 500px;">
+    <qrcod class="qrcod" style="display: none;">
+    <div id="leftmenu" class="leftmenu" style="height: 1000px; width: 400px; position: absolute; z-index: 1; margin-top: -52%; background-color: rgb(255, 255, 255);">
+    <img src="img\qrc.png" alt="" class="qr-up" >
     <span id="doc_time" class="time"></span>
     </div>
+</qrcod>
 </div>
 </body>
 <script>clock()</script>
